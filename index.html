@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Plot Quest 8-Bit</title>
+<meta name="theme-color" content="#181425">
+<meta name="description" content="8-Bit Rollenspiel-Plotgenerator nach Genre, Ort und Eskalationsstufe.">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="crt"></div>
+<main>
+  <header>
+    <h1>PLOT<span>QUEST</span></h1>
+    <p class="sub blink">▶ INSERT IDEA ◀</p>
+  </header>
+
+  <section class="box">
+    <h2>1. GENRE</h2>
+    <div id="genres" class="grid"></div>
+  </section>
+
+  <section class="box">
+    <h2>2. ORT</h2>
+    <div id="orte" class="grid"></div>
+  </section>
+
+  <section class="box">
+    <h2>3. ESKALATION <span id="lvlname"></span></h2>
+    <div id="stufen" class="hp"></div>
+  </section>
+
+  <div class="actions">
+    <button id="go" class="btn big">⚄ PLOT WÜRFELN</button>
+    <button id="rnd" class="btn">? ZUFALL</button>
+  </div>
+
+  <section id="out" class="box dialog hidden">
+    <h2 id="out-title"></h2>
+    <p id="out-text" class="type"></p>
+    <div class="actions">
+      <button id="save" class="btn small">★ MERKEN</button>
+      <button id="copy" class="btn small">⎘ KOPIEREN</button>
+      <button id="again" class="btn small">↻ NOCHMAL</button>
+    </div>
+  </section>
+
+  <section class="box">
+    <h2>★ INVENTAR <span id="cnt"></span></h2>
+    <ul id="saved"><li class="empty">LEER</li></ul>
+  </section>
+
+  <footer>
+    <button id="snd" class="btn small">♪ SOUND: AN</button>
+    <p>© 1987-ish · PRESS START</p>
+  </footer>
+</main>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
